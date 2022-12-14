@@ -1,0 +1,37 @@
+{
+  "name": "gpu-test",
+  "label": "gpu-test",
+  "description": "none",
+  "maintainer": "Ethan Leng",
+  "author": "Ethan Leng",
+  "url": "",
+  "source": "",
+  "license": "Other",
+  "flywheel": "0",
+  "version": "0.0.1",
+  "custom": {
+    "flywheel": {
+      "suite": "TEST"
+    },
+    "gear-builder": {
+      "image": "eleng1729/gpu-test:0.0.1",
+      "category": "analysis"
+    }
+  },
+  "inputs": {
+    "dummy_file": {
+      "base": "file",
+      "description": "dummy file",
+      "type": {
+        "enum": [
+          "text"
+        ]
+      }
+    }
+  },
+  "config": {},
+  "environment": {
+    "FLYWHEEL": "/flywheel/v0"
+  },
+  "command": "bash wrapper.sh"
+}
